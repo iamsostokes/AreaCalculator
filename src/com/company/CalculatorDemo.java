@@ -10,15 +10,32 @@ public class CalculatorDemo {
         Scanner scan = new Scanner(System.in);
         boolean isNumber;
         boolean isNumber2;
+//        boolean result;
+
+//        System.out.println("Enter 1 if you would like to make a rectangle or enter 2 if you would like to make a triangle ");
+//        do {
+//            if (scan.hasNext()) {
+//                int rectangleOrTriangle = scan.nextInt(1);
+//                calculator.setShape("rectangle");
+//                result = true;
+//            } else {
+//                result = false;
+//                scan.next();
+//            }
+//
+//        } while (!result);
+
+
+
         System.out.println("Enter two number values the will define the width and height of a rectangle ");
-
-
-
+//      this do while loop is created to validate the user input for the rectangle
      do {
          if (scan.hasNextInt()) {
+             // storing the user input into a variable
              int measurement1 = scan.nextInt();
              System.out.println("Enter your second number. ");
              int measurement2 = scan.nextInt();
+             // setting the user input to my method
              calculator.setArea(measurement1, measurement2);
              isNumber = true;
          } else {
@@ -30,7 +47,7 @@ public class CalculatorDemo {
      } while (!isNumber);
 
         System.out.println("Now enter two numbers to find the area of a triangle ");
-
+//      this do while loop was created to validate the user input for the triangle
         do {
             if (scan.hasNextInt()) {
                 int measurement3 = scan.nextInt();
