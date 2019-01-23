@@ -8,10 +8,24 @@ public class CalculatorDemo {
 	// write your code here
         Calculator calculator = new Calculator();
         Scanner scan = new Scanner(System.in);
-        int measurement1 = scan.nextInt();
-        int measurement2 = scan.nextInt();
+        boolean isNumber;
+        System.out.println("Enter two number values the will define the width and height of a rectangle. ");
 
-        calculator.setArea(measurement1, measurement2);
+     do {
+         if (scan.hasNextInt()) {
+             int measurement1 = scan.nextInt();
+             System.out.println("Enter your second number. ");
+             int measurement2 = scan.nextInt();
+             calculator.setArea(measurement1, measurement2);
+             isNumber = true;
+         } else {
+             System.out.println("I don't understand, please enter a number");
+             isNumber = false;
+             scan.next();
+         }
+
+     } while (!isNumber);
+
 //        calculator.setShape();
 
         System.out.println("The area of my rectangle is "+ calculator.getArea());
